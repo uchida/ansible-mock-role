@@ -1,0 +1,17 @@
+---
+
+- name: package mock is installed
+  yum:
+    name=mock
+    state=present
+
+- name: user {{ mock_user }} is present and in mock group
+  user:
+    name={{ mock_user }}
+    groups=mock
+    append=yes
+
+- name: create mock repository {{ mock_config }}
+  command:
+    mock -r {{ mock_config }} --init
+    creates=/var/lib/mock/{{ mock_config }}/root
