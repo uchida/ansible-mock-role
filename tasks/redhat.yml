@@ -13,7 +13,7 @@
 
 - name: create mock repository {{ mock_config }}
   command:
-    mock -r {{ mock_config }} --init
+    /usr/bin/mock -r {{ mock_config }} --init
     creates=/var/lib/mock/{{ mock_config }}/root
   sudo: yes
   sudo_user: '{{ mock_user }}'
