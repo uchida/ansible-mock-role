@@ -15,3 +15,6 @@
   command:
     mock -r {{ mock_config }} --init
     creates=/var/lib/mock/{{ mock_config }}/root
+  sudo: yes
+  sudo_user: '{{ mock_user }}'
+
