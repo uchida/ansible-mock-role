@@ -3,7 +3,7 @@ galaxy_info:
   author: Akihiro Uchida
   description: role to install mock
   license: CC0
-  min_ansible_version: 1.7
+  min_ansible_version: 1.9
   platforms:
   - name: EL
     versions:

@@ -17,6 +17,5 @@
     creates=/var/lib/mock/{{ mock_config }}/root
   register: mock_init_result
   failed_when: "'ERROR' in mock_init_result.stderr"
-  sudo: yes
-  sudo_user: '{{ mock_user }}'
-
+  become: yes
+  become_user: '{{ mock_user }}'

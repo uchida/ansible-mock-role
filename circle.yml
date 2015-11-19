@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-    - pip install ansible==1.7
+    - pip install ansible==1.9
     - |
       cat <<__EOF__ > ansible.cfg
       [defaults]
