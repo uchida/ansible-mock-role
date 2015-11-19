@@ -4,6 +4,6 @@
     - ansible-mock-role
     - { role: ansible-mock-role, mock_user: mock }
     - { role: ansible-mock-role, mock_config: epel-7-x86_64 }
-    - role: uchida.mock
+    - role: ansible-mock-role
       mock_config: epel-7-x86_64
       mock_user: vagrant
