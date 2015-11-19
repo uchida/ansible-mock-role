@@ -15,7 +15,7 @@ mock_config: fedora-rawhide-x86_64
 mock_user: mock
 ```
 
-`mock_config` is a variable to specify 
+`mock_config` is a variable to specify mock configuration name in /etc/mock.
 
 `mock_user` is a variable to specify user to be add in the `mock` group
 
