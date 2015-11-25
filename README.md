@@ -1,5 +1,6 @@
 # uchida.mock
 
+[![Ansible Role](https://img.shields.io/ansible/role/6101.svg)](https://galaxy.ansible.com/detail#/role/6101)
 [![CircleCI](https://img.shields.io/circleci/project/uchida/ansible-mock-role.svg)](https://circleci.com/gh/uchida/ansible-mock-role)
 [![License](https://img.shields.io/github/license/uchida/ansible-mock-role.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 
