@@ -1,7 +1,7 @@
 # uchida.mock
 
 [![CircleCI](https://img.shields.io/circleci/project/uchida/ansible-mock-role.svg)](https://circleci.com/gh/uchida/ansible-mock-role)
-[![License](https://img.shields.io/github/license/uchida/ansible-mock-role.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
+[![License](https://img.shields.io/github/license/uchida/ansible-mock-role.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 
 ansible role to install mock, clean room package builder for RedHat Enterprise Linxu derivative distributions.
 In addition, this role add user to mock group and initialize chroot repository.
