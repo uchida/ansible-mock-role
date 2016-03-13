@@ -2,14 +2,18 @@
 
 - name: package mock is installed
   yum:
-    name=mock
-    state=present
+    pkg="{{ 'mock-{{ mock_version}}' if mock_version is defined else 'mock' }}"
+    state="{{ 'present' if mock_version is defined else 'latest' }}"
+  tags:
+    - mock-package
 
 - name: user {{ mock_user }} is present and in mock group
   user:
     name={{ mock_user }}
     groups=mock
     append=yes
+  tags:
+    - mock-user
 
 - name: create mock repository {{ mock_config }}
   command:
