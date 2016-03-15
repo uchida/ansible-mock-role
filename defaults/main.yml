@@ -1,2 +1,3 @@
 mock_user: mock
 mock_config: fedora-rawhide-x86_64
+mock_config_init: true
