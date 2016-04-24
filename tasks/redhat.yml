@@ -2,7 +2,7 @@
 
 - name: package mock is installed
   yum:
-    pkg="{{ 'mock-{{ mock_version}}' if mock_version is defined else 'mock' }}"
+    pkg="mock{{ '-' + mock_version if mock_version is defined else ''}}"
     state="{{ 'present' if mock_version is defined else 'latest' }}"
 
 - name: user {{ mock_user }} is present and in mock group
