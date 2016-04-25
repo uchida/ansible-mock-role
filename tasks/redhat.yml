@@ -2,8 +2,8 @@
 
 - name: package mock is installed
   yum:
-    name=mock
-    state=present
+    pkg="mock{{ '-' + mock_version if mock_version is defined else ''}}"
+    state="{{ 'present' if mock_version is defined else 'latest' }}"
 
 - name: user {{ mock_user }} is present and in mock group
   user:
@@ -19,3 +19,4 @@
   failed_when: "'ERROR' in mock_init_result.stderr"
   become: yes
   become_user: '{{ mock_user }}'
+  when: mock_config_init
