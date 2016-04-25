@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/uchida/ansible-mock-role.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 [![Travis](https://img.shields.io/travis/uchida/ansible-mock-role.svg)](https://travis-ci.org/uchida/ansible-mock-role)
 
-ansible role to install mock, clean room package builder for RedHat Enterprise Linxu derivative distributions.
+ansible role to install mock, clean room package builder for RedHat Enterprise Linux derivative distributions.
 In addition, this role add user to mock group and initialize chroot repository.
 
 ## Role Variables
@@ -18,7 +18,7 @@ mock_user: mock
 
 `mock_config` is a variable to specify mock configuration name in /etc/mock.
 
-`mock_user` is a variable to specify user to be add in the `mock` group
+`mock_user` is a variable to specify user to be add in the `mock` group.
 
 ## Example Playbooks
 
