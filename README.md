@@ -12,11 +12,12 @@ In addition, this role add user to mock group and initialize chroot repository.
 Available role variables are listed below, along with default values:
 
 ```yaml
-mock_config: fedora-rawhide-x86_64
+mock_config: ''
 mock_user: mock
 ```
 
 `mock_config` is a variable to specify mock configuration name in /etc/mock.
+if this variable is specified, create mock repository. default `''` no mock repository created.
 
 `mock_user` is a variable to specify user to be add in the `mock` group.
 
@@ -37,6 +38,8 @@ install mock and add vagrant user to mock group and initialize fedora-rawhide-x8
 ```yaml
 - hosts: servers
   roles:
+  - role: uchida.mock
+    mock_user: vagrant
   - role: uchida.mock
     mock_config: fedora-rawhide-x86_64
     mock_user: vagrant

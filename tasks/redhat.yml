@@ -19,4 +19,4 @@
   failed_when: "'ERROR' in mock_init_result.stderr"
   become: yes
   become_user: '{{ mock_user }}'
-  when: mock_config_init
+  when: mock_config != ''
