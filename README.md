@@ -56,4 +56,4 @@ install mock and add vagrant user to mock group and initialize fedora-rawhide-x8
 
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed)
 
-dedicated to public domain by [contributors](https://github.com/uchida/ansible-mock-role/graphs/contributors).
+dedicated to public domain, no rights reserved.
