@@ -1,9 +1,8 @@
 ---
-- hosts: all
+- hosts: test
+  connection: docker
+  remote_user: root
   roles:
-    - ansible-mock-role
-    - { role: ansible-mock-role, mock_user: mock }
-    - { role: ansible-mock-role, mock_config: epel-7-x86_64 }
     - role: ansible-mock-role
       mock_config: epel-7-x86_64
       mock_user: vagrant
