@@ -2,6 +2,11 @@
 language: python
 python: "2.7"
 
+env:
+  - IMAGE=fedora TAG=24
+  - IMAGE=fedora TAG=23
+  - IMAGE=fedora TAG=22
+
 dist: trusty
 sudo: required
 
@@ -16,9 +21,14 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install -o Dpkg::Options::="--force-confdef" -y docker-engine
   - docker version
-  - docker pull fedora:latest
-  - docker run --privileged=true --name test -di fedora bash
-  - docker exec test dnf install -y python2 python2-dnf sudo
+  - docker pull $IMAGE:$TAG
+  - docker run --privileged=true --name test -di $IMAGE:$TAG /bin/bash
+  - |
+    if [ ${TAG} = "22" ]; then
+      docker exec test yum install -y python2 sudo
+    else
+      docker exec test dnf install -y python2 python2-dnf sudo
+    fi
 
 install:
   - pip install ansible
