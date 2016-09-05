@@ -1,14 +1,16 @@
 ---
 galaxy_info:
   author: Akihiro Uchida
-  description: role to install mock
+  description: ansible role to install mock and add user to mock group and initialize chroot repository
   license: CC0
   min_ansible_version: 1.9
   platforms:
-  - name: EL
+  - name: Fedora
     versions:
-     - 7
-  categories:
+    - 24
+    - 23
+    - 22
+  galaxy_tags:
   - packaging
 dependencies: []
 
