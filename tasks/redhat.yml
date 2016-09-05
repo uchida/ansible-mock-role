@@ -1,16 +1,9 @@
 ---
 
 - name: package mock is installed
-  yum:
+  package:
     pkg="mock{{ '-' + mock_version if mock_version is defined else '' }}"
     state="{{ 'present' if mock_version is defined else 'latest' }}"
-  when: ansible_distribution == 'Fedora' and ansible_distribution_version < '22'
-
-- name: package mock is installed
-  dnf:
-    pkg="mock{{ '-' + mock_version if mock_version is defined else '' }}"
-    state="{{ 'present' if mock_version is defined else 'latest' }}"
-  when: ansible_distribution == 'Fedora' and ansible_distribution_version >= '22'
 
 - name: user {{ mock_user }} is present and in mock group
   user:
