@@ -23,7 +23,12 @@ before_install:
   - docker version
   - docker pull $IMAGE:$TAG
   - docker run --privileged=true --name test -di $IMAGE:$TAG /bin/bash
-  - docker exec test dnf install -y python2 python2-dnf sudo
+  - |
+    if [ ${TAG} = "22" ]; then
+      docker exec test yum install -y python2 sudo
+    else
+      docker exec test dnf install -y python2 python2-dnf sudo
+    fi
 
 install:
   - pip install ansible
